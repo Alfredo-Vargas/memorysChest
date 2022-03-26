@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">memorysChest</string>
+    <string name="chose_theme_label">A label to choose the theme</string>
+    <string name="chose_theme_message">choose a theme</string>
+    <string name="champagne_ball">Ball color champagne</string>
+    <string name="chestnut_ball">Ball color chestnut</string>
+    <string name="champagne_grey_ball">Ball color champagne grey</string>
+    <string name="yonder_ball">Ball color yonder</string>
+    <string name="indigo_dye">Ball color indigo dye</string>
+    <string name="dutch_white">Ball color dutch white</string>
+    <string name="vermilion_ball">Ball color vermilion</string>
+    <string name="eerie_black_ball">Ball color eerie black</string>
+    <string name="powder_blue_ball">Ball color powder blue</string>
+    <string name="pink_sherbert_ball">Ball color pink sherbert</string>
+    <string name="honey_dew_ball">Ball color honey dew</string>
+    <string name="spanish_pink_ball">Ball color spanish pink</string>
 </resources>

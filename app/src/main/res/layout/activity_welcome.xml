@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imagePowderBlue"
+        android:layout_width="184dp"
+        android:layout_height="139dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/powder_blue_ball"
+        app:content="@string/powder_blue_ball"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_powder_blue" />
+
+    <ImageView
+        android:id="@+id/imageHoneyDew"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:contentDescription="@string/honey_dew_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imagePowderBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imagePowderBlue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imagePowderBlue"
+        app:layout_constraintTop_toTopOf="@+id/imagePowderBlue"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_honeydew" />
+
+    <ImageView
+        android:id="@+id/imageSpanishPink"
+        android:layout_width="91dp"
+        android:layout_height="77dp"
+        android:contentDescription="@string/chestnut_ball"
+        app:layoutDescription="@string/spanish_pink_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imagePowderBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imagePowderBlue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imagePowderBlue"
+        app:layout_constraintTop_toTopOf="@+id/imagePowderBlue"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_spanish_pink" />
+
+    <ImageView
+        android:id="@+id/imageChampagne"
+        android:layout_width="184dp"
+        android:layout_height="139dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/champagne_ball"
+        app:layout_constraintBottom_toTopOf="@+id/imageEerieBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_champagne" />
+
+    <ImageView
+        android:id="@+id/imageChampGrey"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:contentDescription="@string/champagne_grey_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imageChampagne"
+        app:layout_constraintEnd_toEndOf="@+id/imageChampagne"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageChampagne"
+        app:layout_constraintTop_toTopOf="@+id/imageChampagne"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_cham_gray" />
+
+    <ImageView
+        android:id="@+id/imageEerieBlack"
+        android:layout_width="184dp"
+        android:layout_height="139dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/eerie_black_ball"
+        app:layout_constraintBottom_toTopOf="@+id/imagePowderBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_eerie_black" />
+
+    <ImageView
+        android:id="@+id/imageIndigoDye"
+        android:layout_width="91dp"
+        android:layout_height="77dp"
+        android:contentDescription="@string/indigo_dye"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEerieBlack"
+        app:layout_constraintEnd_toEndOf="@+id/imageEerieBlack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageEerieBlack"
+        app:layout_constraintTop_toTopOf="@+id/imageEerieBlack"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_indigo_dye" />
+
+    <ImageView
+        android:id="@+id/imageChestnut"
+        android:layout_width="91dp"
+        android:layout_height="77dp"
+        android:contentDescription="@string/chestnut_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imageChampagne"
+        app:layout_constraintEnd_toEndOf="@+id/imageChampagne"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageChampagne"
+        app:layout_constraintTop_toTopOf="@+id/imageChampagne"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_chestnut" />
+
+    <ImageView
+        android:id="@+id/imageDutchWhite"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:contentDescription="@string/dutch_white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEerieBlack"
+        app:layout_constraintEnd_toEndOf="@+id/imageEerieBlack"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageEerieBlack"
+        app:layout_constraintTop_toTopOf="@+id/imageEerieBlack"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_dutch_white" />
+
+    <ImageView
+        android:id="@+id/imageVermilion"
+        android:layout_width="63dp"
+        android:layout_height="57dp"
+        android:contentDescription="@string/yonder_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEerieBlack"
+        app:layout_constraintEnd_toEndOf="@+id/imageEerieBlack"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageEerieBlack"
+        app:layout_constraintTop_toTopOf="@+id/imageEerieBlack"
+        app:layout_constraintVertical_bias="0.756"
+        app:srcCompat="@drawable/ic_vermilion" />
+
+    <ImageView
+        android:id="@+id/imageYonder"
+        android:layout_width="63dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="120dp"
+        android:contentDescription="@string/yonder_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imageChampagne"
+        app:layout_constraintStart_toStartOf="@+id/imageChampagne"
+        app:layout_constraintTop_toTopOf="@+id/imageChampagne"
+        app:layout_constraintVertical_bias="0.756"
+        app:srcCompat="@drawable/ic_yonder" />
+
+    <ImageView
+        android:id="@+id/imagePinkSherbert"
+        android:layout_width="63dp"
+        android:layout_height="57dp"
+        android:contentDescription="@string/pink_sherbert_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/imagePowderBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imagePowderBlue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imagePowderBlue"
+        app:layout_constraintTop_toTopOf="@+id/imagePowderBlue"
+        app:layout_constraintVertical_bias="0.756"
+        app:srcCompat="@drawable/ic_pink_sherbet" />
+
+    <TextView
+        android:id="@+id/chooseTheme"
+        android:layout_width="188dp"
+        android:layout_height="26dp"
+        android:contentDescription="@string/chose_theme_label"
+        android:text="@string/chose_theme_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/eerie_black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/imageChampagne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageIndigoDye,imageVermilion,imageDutchWhite,imageEerieBlack" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageSpanishPink,imagePinkSherbert,imageHoneyDew,imagePowderBlue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupWood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageYonder,imageChampGrey,imageChestnut,imageChampagne" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
