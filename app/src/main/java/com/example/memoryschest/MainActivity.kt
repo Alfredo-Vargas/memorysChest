@@ -33,10 +33,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    // mainPage needs to be public to pass the user's theme and change the theme when necessary
-    private fun mainPage() {
-        // here we need to use an intent to pass the current theme and start the activity_main
-        val intentToMain = Intent(this, MainActivity::class.java)
-        setContentView(R.layout.activity_main)
-    }
 }

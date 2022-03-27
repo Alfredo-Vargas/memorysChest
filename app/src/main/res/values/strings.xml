@@ -17,4 +17,8 @@
     <string name="pink_sherbert_ball">Ball color pink sherbert</string>
     <string name="honey_dew_ball">Ball color honey dew</string>
     <string name="spanish_pink_ball">Ball color spanish pink</string>
+    <string name="favorite_button">Button with a heart symbol</string>
+    <string name="view_button">view</string>
+    <string name="sort_button">sort</string>
+    <string name="theme_button">theme</string>
 </resources>
