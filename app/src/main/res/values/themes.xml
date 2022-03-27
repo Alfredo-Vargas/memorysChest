@@ -13,4 +13,49 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="mainTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Extra settings -->
+        <item name="android:textColor">@color/champagne_grey</item>
+        <item name="android:colorBackground">@color/champagne</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yonder</item>
+        <item name="colorOnPrimary">@color/champagne</item>
+        <item name="colorPrimaryVariant">@color/champagne</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yonder</item>
+        <item name="colorSecondaryVariant">@color/chestnut</item>
+        <item name="colorOnSecondary">@color/champagne</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/chestnut</item>
+    </style>
+    <style name="darkTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Extra settings -->
+        <item name="android:textColor">@color/dutch_white</item>
+        <item name="android:colorBackground">@color/eerie_black</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/vermilion</item>
+        <item name="colorOnPrimary">@color/eerie_black</item>
+        <item name="colorPrimaryVariant">@color/eerie_black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/vermilion</item>
+        <item name="colorSecondaryVariant">@color/indigo_dye</item>
+        <item name="colorOnSecondary">@color/eerie_black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/indigo_dye</item>
+    </style>
+    <style name="lightTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Extra settings -->
+        <item name="android:textColor">@color/honey_dew</item>
+        <item name="android:colorBackground">@color/powder_blue</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/spanish_pink</item>
+        <item name="colorOnPrimary">@color/powder_blue</item>
+        <item name="colorPrimaryVariant">@color/powder_blue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/spanish_pink</item>
+        <item name="colorSecondaryVariant">@color/honey_dew</item>
+        <item name="colorOnSecondary">@color/powder_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/pink_sherbert</item>
+    </style>
 </resources>

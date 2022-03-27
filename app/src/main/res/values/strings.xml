@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">memorysChest</string>
+    <string name="app_name">Memory\'s Chest</string>
     <string name="chose_theme_label">A label to choose the theme</string>
-    <string name="theme1">theme1</string>
-    <string name="theme2">theme2</string>
-    <string name="theme3">theme3</string>
+    <string name="main_theme">main theme</string>
+    <string name="dark_theme">dark theme</string>
+    <string name="light_theme">light theme</string>
     <string name="chose_theme_message">choose a theme</string>
     <string name="champagne_ball">Ball color champagne</string>
     <string name="chestnut_ball">Ball color chestnut</string>

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="champagne">#FFF4E2C8</color>
+    <color name="chestnut">#FF99765F</color>
+    <color name="yonder">#FF5D74BC</color>
+    <color name="champagne_grey">#FF5a5a5a</color>
     <color name="eerie_black">#FF191919</color>
     <color name = "indigo_dye">#FF2D4263</color>
     <color name = "vermilion">#FFC84B31</color>
     <color name = "dutch_white">#FFECDBBA</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_200">#FFBB86FC</color>
+    <color name="powder_blue">#FF357575</color>
+    <color name="honey_dew">#FF9DBA83</color>
     <color name="pink_sherbert">#FFF38BA0</color>
     <color name="spanish_pink">#FFFFBCBC</color>
+    <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
