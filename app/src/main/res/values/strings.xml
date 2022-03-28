@@ -21,4 +21,10 @@
     <string name="view_button">view</string>
     <string name="sort_button">sort</string>
     <string name="theme_button">theme</string>
+    <string-array name="theme">
+        <item>theme</item>
+        <item>chestnut</item>
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
 </resources>

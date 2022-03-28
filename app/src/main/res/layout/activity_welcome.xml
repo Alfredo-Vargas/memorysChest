@@ -10,7 +10,7 @@
         android:id="@+id/imagePowderBlue"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="60dp"
         android:contentDescription="@string/powder_blue_ball"
         app:content="@string/powder_blue_ball"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
         android:id="@+id/imageChampagne"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/champagne_ball"
         app:layout_constraintBottom_toTopOf="@+id/imageEerieBlack"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
         android:id="@+id/imageEerieBlack"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/eerie_black_ball"
         app:layout_constraintBottom_toTopOf="@+id/imagePowderBlue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,8 +172,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageChampagne"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/groupDark"

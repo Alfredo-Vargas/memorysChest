@@ -17,6 +17,7 @@
         <!-- Extra settings -->
         <item name="android:textColor">@color/champagne_grey</item>
         <item name="android:colorBackground">@color/champagne</item>
+        <item name="backgroundTint">@color/yonder</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yonder</item>
         <item name="colorOnPrimary">@color/champagne</item>
@@ -32,6 +33,7 @@
         <!-- Extra settings -->
         <item name="android:textColor">@color/dutch_white</item>
         <item name="android:colorBackground">@color/eerie_black</item>
+        <item name="backgroundTint">@color/vermilion</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/vermilion</item>
         <item name="colorOnPrimary">@color/eerie_black</item>
@@ -47,6 +49,7 @@
         <!-- Extra settings -->
         <item name="android:textColor">@color/honey_dew</item>
         <item name="android:colorBackground">@color/powder_blue</item>
+        <item name="backgroundTint">@color/spanish_pink</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/spanish_pink</item>
         <item name="colorOnPrimary">@color/powder_blue</item>
