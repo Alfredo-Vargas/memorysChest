@@ -15,7 +15,7 @@
     </style>
     <style name="mainTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Extra settings -->
-        <item name="android:textColor">@color/champagne_grey</item>
+        <item name="android:textColor">@color/champagne</item>
         <item name="android:colorBackground">@color/champagne</item>
         <item name="backgroundTint">@color/yonder</item>
         <!-- Primary brand color. -->

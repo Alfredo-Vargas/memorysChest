@@ -63,12 +63,13 @@
                 android:layout_marginBottom="5sp"
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
+                android:clickable="true"
                 android:contentDescription="@string/theme_button"
                 android:dropDownWidth="wrap_content"
-                android:textColor="?attr/colorOnPrimary"
-                android:popupBackground="?attr/colorPrimary"
                 android:entries="@array/theme"
-                android:spinnerMode="dropdown" />
+                android:popupBackground="?attr/colorPrimary"
+                android:spinnerMode="dropdown"
+                android:textColor="?attr/colorOnPrimary" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
