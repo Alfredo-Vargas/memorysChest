@@ -28,25 +28,25 @@
                 android:id="@+id/viewButton"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5sp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="@string/view_button"
-                android:textSize="12sp" />
+                android:textSize="12dp" />
 
             <Button
                 android:id="@+id/sortButton"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5sp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="@string/sort_button"
-                android:textSize="12sp" />
+                android:textSize="12dp" />
 
             <ImageButton
                 android:id="@+id/favoriteButton"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5sp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/favorite_button"
                 app:srcCompat="@drawable/ic_heart_main"
@@ -56,11 +56,11 @@
                 android:id="@+id/themeButton"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5sp"
-                android:layout_marginLeft="5sp"
-                android:layout_marginTop="5sp"
-                android:layout_marginRight="5sp"
-                android:layout_marginBottom="5sp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
                 android:clickable="true"
