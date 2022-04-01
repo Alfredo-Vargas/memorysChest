@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Memory\'s Chest</string>
+    <string name="chosen_theme_value"></string>
     <string name="chose_theme_label">A label to choose the theme</string>
     <string name="main_theme">main theme</string>
     <string name="dark_theme">dark theme</string>
