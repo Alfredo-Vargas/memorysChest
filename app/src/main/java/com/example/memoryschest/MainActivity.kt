@@ -1,41 +1,36 @@
 package com.example.memoryschest
 
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.SharedPreferences
+import android.os.Bundle
+import android.view.Gravity
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-
-import com.example.settings.UserPreferences
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    // normal starting main activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val themePreference: SharedPreferences =
-            getSharedPreferences("chosenTheme", MODE_PRIVATE)
-        val user = UserPreferences()
-        if (user.loadProfile(themePreference)) {
-            val themePreference: SharedPreferences =
-                getSharedPreferences("chosenTheme", MODE_PRIVATE)
-            // to reset the shared preference for debugging
-            //themePreference.edit().clear().commit()
-            val themeChosen: String? = themePreference.getString("THEME_KEY", null)
-            setProfileStartMain(themeChosen)
-        }
-        else {
-            val showWelcome = Intent(this, WelcomeActivity::class.java)
-            startActivity(showWelcome)
-            // we get the value that comes from the welcome activity
-            val optionSelected: String? = intent.getStringExtra("selectedOption")
-            // we save the value to our theme preferences
-            user.saveProfile(themePreference, optionSelected)
-            // we get the string value of our theme preference
-            val themeChosen: String? = themePreference.getString("THEME_KEY", null)
-            // we start the main activity based on the value chosen
-            setProfileStartMain(themeChosen)
+        /* To reset the shared preference for debugging
+        val currentThemePreference: SharedPreferences =
+            getSharedPreferences("theme", MODE_PRIVATE)
+        currentThemePreference.edit().clear().commit()
+         */
+
+        // debugToastMain("we start main", true)
+        when (existUserTheme()){
+            true -> {
+                applyUserThemeToMain(getUserTheme())
+            }
+            else -> {
+                val showWelcome = Intent(this, WelcomeActivity::class.java)
+                startActivity(showWelcome)
+                val optionSelected: String? = intent.getStringExtra("selectedOption")
+                setUserTheme(optionSelected)
+                applyUserThemeToMain(optionSelected)
+                launchMain()
+            }
         }
     }
 
@@ -55,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setProfileStartMain(themeChosen: String?){
+    fun applyUserThemeToMain(themeChosen: String?){
         when (themeChosen) {
             "mainTheme" -> {
                 setTheme(R.style.mainTheme)
@@ -69,6 +64,48 @@ class MainActivity : AppCompatActivity() {
                 setTheme(R.style.lightTheme)
                 launchMain()
             }
+            else -> {
+                setTheme(R.style.mainTheme)
+                launchMain()
+            }
         }
+    }
+
+    fun debugToastMain(message: String, flag: Boolean) {
+        Toast(this).apply {
+            duration = Toast.LENGTH_SHORT
+            setGravity(Gravity.CENTER, 0, 0)
+            if (flag) {
+                setText(message)
+            }
+            else {
+                setText("Something went wrong")
+            }
+        }.show()
+    }
+
+    fun setUserTheme(themeChosen: String?) {
+        // MODE_PRIVATE.- File creation mode: the default mode, where the created file can only
+        // be accessed by the calling application (or all applications sharing the same user ID).
+        val themePreferences: SharedPreferences = getSharedPreferences("theme", MODE_PRIVATE)
+        val themeEditor = themePreferences.edit()
+        // keep track of the theme chosen by THEME_KEY
+        themeEditor.putString("THEME_KEY", themeChosen)
+        // keep track of the theme changed in SAVED_THEME boolean
+        themeEditor.putBoolean("EXISTS_THEME", !themeChosen.isNullOrBlank())
+        // commit() applies instantly, apply() hold changes until next call
+        themeEditor.apply()
+        themeEditor.commit()
+    }
+
+    fun getUserTheme(): String? {
+        val themePreferences: SharedPreferences = getSharedPreferences("theme", MODE_PRIVATE)
+        return themePreferences.getString("THEME_KEY", null)
+    }
+
+    fun existUserTheme(): Boolean? {
+        val themePreferences: SharedPreferences = getSharedPreferences("theme", MODE_PRIVATE)
+        // we get the boolean value if user theme already exits
+        return themePreferences.getBoolean("EXISTS_THEME", false)
     }
 }
