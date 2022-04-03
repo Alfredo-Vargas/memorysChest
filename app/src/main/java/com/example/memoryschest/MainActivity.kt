@@ -4,21 +4,22 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /* To reset the shared preference for debugging
+
+/*
+        // Run this one time to clear SharedPreferences
         val currentThemePreference: SharedPreferences =
             getSharedPreferences("theme", MODE_PRIVATE)
         currentThemePreference.edit().clear().commit()
-         */
+*/
 
-        // debugToastMain("we start main", true)
         when (existUserTheme()){
             true -> {
                 applyUserThemeToMain(getUserTheme())
@@ -29,59 +30,47 @@ class MainActivity : AppCompatActivity() {
                 val optionSelected: String? = intent.getStringExtra("selectedOption")
                 setUserTheme(optionSelected)
                 applyUserThemeToMain(optionSelected)
-                launchMain()
             }
         }
+        launchMainWidgets()
     }
 
-    private fun launchMain() {
-        setContentView(R.layout.activity_main)
-        val spinner: Spinner = findViewById(R.id.themeButton)
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.theme,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            spinner.adapter = adapter
+    private fun launchMainWidgets() {
+        var themeButton : Button = findViewById(R.id.themeButton)
+        themeButton.setOnClickListener() {
+            themeChangeFromMain()
         }
+
+        // Here we create the adapter
+        val cardTitles : Array<String> = resources.getStringArray(R.array.cardTittles)
+        val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
+        val adapterImages = GridItemAdapter(cardTitles, cardImages)
+        // spanCount the number of items side by side (in a single row)
+        val gridLayout = GridLayoutManager(this, 2)
+        gridItems.layoutManager = gridLayout
+        gridItems.adapter = adapterImages
     }
 
     fun applyUserThemeToMain(themeChosen: String?){
         when (themeChosen) {
             "mainTheme" -> {
-                setTheme(R.style.mainTheme)
-                launchMain()
+                theme.applyStyle(R.style.mainTheme, true)
+                //setTheme(R.style.mainTheme)
             }
             "darkTheme" -> {
-                setTheme(R.style.darkTheme)
-                launchMain()
+                theme.applyStyle(R.style.darkTheme, true)
+                //setTheme(R.style.darkTheme)
             }
             "lightTheme" -> {
-                setTheme(R.style.lightTheme)
-                launchMain()
+                theme.applyStyle(R.style.lightTheme, true)
+                //setTheme(R.style.lightTheme)
             }
             else -> {
-                setTheme(R.style.mainTheme)
-                launchMain()
+                theme.applyStyle(R.style.mainTheme, true)
+                //setTheme(R.style.mainTheme)
             }
         }
-    }
-
-    fun debugToastMain(message: String, flag: Boolean) {
-        Toast(this).apply {
-            duration = Toast.LENGTH_SHORT
-            setGravity(Gravity.CENTER, 0, 0)
-            if (flag) {
-                setText(message)
-            }
-            else {
-                setText("Something went wrong")
-            }
-        }.show()
+        setContentView(R.layout.activity_main)
     }
 
     fun setUserTheme(themeChosen: String?) {
@@ -93,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         themeEditor.putString("THEME_KEY", themeChosen)
         // keep track of the theme changed in SAVED_THEME boolean
         themeEditor.putBoolean("EXISTS_THEME", !themeChosen.isNullOrBlank())
-        // commit() applies instantly, apply() hold changes until next call
+        // commit() applies instantly, apply() hold changes until next
         themeEditor.apply()
         themeEditor.commit()
     }
@@ -107,5 +96,22 @@ class MainActivity : AppCompatActivity() {
         val themePreferences: SharedPreferences = getSharedPreferences("theme", MODE_PRIVATE)
         // we get the boolean value if user theme already exits
         return themePreferences.getBoolean("EXISTS_THEME", false)
+    }
+
+    private fun debugToastMain(message: String) {
+        Toast(this).apply {
+            duration = Toast.LENGTH_SHORT
+            setGravity(Gravity.CENTER, 0, 0)
+            setText(message)
+        }.show()
+    }
+
+    fun themeChangeFromMain() {
+        val showWelcome = Intent(this, WelcomeActivity::class.java)
+        startActivity(showWelcome)
+        val optionSelected: String? = intent.getStringExtra("selectedOption")
+        setUserTheme(optionSelected)
+        applyUserThemeToMain(optionSelected)
+        launchMainWidgets()
     }
 }

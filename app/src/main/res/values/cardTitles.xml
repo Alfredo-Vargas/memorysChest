@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cardTittles">
+        <item>First Item</item>
+        <item>Second Item</item>
+        <item>ThirdItem</item>
+        <item>Fourth Item</item>
+        <item>Fifth Item</item>
+        <item>Sixth Item</item>
+        <item>Seventh Item</item>
+        <item>Eighth Item</item>
+        <item>Tenth Item</item>
+    </string-array>
+</resources>
