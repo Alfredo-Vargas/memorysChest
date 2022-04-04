@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Baúl de las Memorias</string>
+    <string name="chosen_theme_value"></string>
+    <string name="chose_theme_label">Una etiqueta para escojer el tema</string>
+    <string name="main_theme">Tema principal</string>
+    <string name="dark_theme">Tema oscuro</string>
+    <string name="light_theme">Tema claro</string>
+    <string name="chose_theme_message">Escoje un tema</string>
+    <string name="champagne_ball">Bola color champagne</string>
+    <string name="chestnut_ball">Bola color castaño</string>
+    <string name="champagne_grey_ball">Bola color gris castaño</string>
+    <string name="yonder_ball">Bola color azul lejano</string>
+    <string name="indigo_dye">Bola color tinte índigo</string>
+    <string name="dutch_white">Bola color neerlandés blanco</string>
+    <string name="vermilion_ball">Bola color bermellón</string>
+    <string name="eerie_black_ball">Bola color negro misterioso</string>
+    <string name="powder_blue_ball">Bola color azul polvo</string>
+    <string name="pink_sherbert_ball">Bola color rosado sherbert</string>
+    <string name="honey_dew_ball">Bola color gotas de miel</string>
+    <string name="spanish_pink_ball">Bola color rosado español</string>
+    <string name="favorite_button">Boton con símbolo de corazón</string>
+    <string name="view_button">Vista</string>
+    <string name="sort_button">Orden</string>
+    <string name="theme_button">Tema</string>
+    <string-array name="theme">
+        <item>Tema</item>
+        <item>castaño</item>
+        <item>oscuro</item>
+        <item>claro</item>
+    </string-array>
+</resources>

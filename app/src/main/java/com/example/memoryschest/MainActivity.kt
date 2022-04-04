@@ -13,16 +13,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-/*
-        // Run this one time to clear SharedPreferences
+        // Run this one time to clear SharedPreferences or remove to save to system.
         val currentThemePreference: SharedPreferences =
             getSharedPreferences("theme", MODE_PRIVATE)
         currentThemePreference.edit().clear().commit()
-*/
+
+//        val answer: String = existUserTheme().toString()
+//        debugToastMain(answer)
 
         when (existUserTheme()){
             true -> {
                 applyUserThemeToMain(getUserTheme())
+                launchMainWidgets()
             }
             else -> {
                 val showWelcome = Intent(this, WelcomeActivity::class.java)
@@ -30,9 +32,12 @@ class MainActivity : AppCompatActivity() {
                 val optionSelected: String? = intent.getStringExtra("selectedOption")
                 setUserTheme(optionSelected)
                 applyUserThemeToMain(optionSelected)
+                if (!optionSelected.isNullOrBlank()){
+                    debugToastMain("Selected: $optionSelected")
+                }
+                launchMainWidgets()
             }
         }
-        launchMainWidgets()
     }
 
     private fun launchMainWidgets() {
@@ -55,22 +60,25 @@ class MainActivity : AppCompatActivity() {
         when (themeChosen) {
             "mainTheme" -> {
                 theme.applyStyle(R.style.mainTheme, true)
+                this.setContentView(R.layout.activity_main)
                 //setTheme(R.style.mainTheme)
             }
             "darkTheme" -> {
                 theme.applyStyle(R.style.darkTheme, true)
+                this.setContentView(R.layout.activity_main)
                 //setTheme(R.style.darkTheme)
             }
             "lightTheme" -> {
                 theme.applyStyle(R.style.lightTheme, true)
+                this.setContentView(R.layout.activity_main)
                 //setTheme(R.style.lightTheme)
             }
             else -> {
                 theme.applyStyle(R.style.mainTheme, true)
+                this.setContentView(R.layout.activity_main)
                 //setTheme(R.style.mainTheme)
             }
         }
-        setContentView(R.layout.activity_main)
     }
 
     fun setUserTheme(themeChosen: String?) {
