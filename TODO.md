@@ -2,10 +2,11 @@
 - [x] How to use preferences to set layout and save it
 - [x] How to change the text color and style of app title bar
 - [x] Change of themes from the theme button implemented
-- [ ] How to set the Main Theme from another activity
 - [ ] How to access the directory photos of your device (tip add an entry to the android manifest file and get a sample of how to get info from the content manager) 
 - [x] Research which image `recycleviewer` to use? Picasso or others?
-- [ ] `existsUserTheme` always returns false! (fix it!)
+- [x] `existsUserTheme` always returns false! (fix it!)
+- [x] Change the hearts pictures on the Main Activity menu
+- [ ] Implement Logic to change View Mode of the pictures - Change Layout of `RecyclerView` dynamically!
 
 # Items that must be included in the project:
 - [x] Different activities and use of intents
