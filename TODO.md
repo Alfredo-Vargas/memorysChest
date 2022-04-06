@@ -7,6 +7,7 @@
 - [x] `existsUserTheme` always returns false! (fix it!)
 - [x] Change the hearts pictures on the Main Activity menu
 - [ ] Implement Logic to change View Mode of the pictures - Change Layout of `RecyclerView` dynamically!
+- [ ] Change Button text from Single to Grid after every click.
 
 # Items that must be included in the project:
 - [x] Different activities and use of intents
