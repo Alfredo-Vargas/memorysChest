@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cardImages">
+        <item>https://picsum.photos/id/0/367/267</item>
+        <item>https://picsum.photos/id/1/367/267</item>
+        <item>https://picsum.photos/id/10/367/267</item>
+        <item>https://picsum.photos/id/100/367/267</item>
+        <item>https://picsum.photos/id/1000/367/267</item>
         <item>https://picsum.photos/id/1001/367/267</item>
         <item>https://picsum.photos/id/1002/367/267</item>
         <item>https://picsum.photos/id/1003/367/267</item>
@@ -9,6 +14,43 @@
         <item>https://picsum.photos/id/1006/367/267</item>
         <item>https://picsum.photos/id/1008/367/267</item>
         <item>https://picsum.photos/id/1009/367/267</item>
+        <item>https://picsum.photos/id/101/367/267</item>
         <item>https://picsum.photos/id/1010/367/267</item>
+        <item>https://picsum.photos/id/1011/367/267</item>
+        <item>https://picsum.photos/id/1012/367/267</item>
+        <item>https://picsum.photos/id/1013/367/267</item>
+        <item>https://picsum.photos/id/1014/367/267</item>
+        <item>https://picsum.photos/id/1015/367/267</item>
+        <item>https://picsum.photos/id/1016/367/267</item>
+        <item>https://picsum.photos/id/1019/367/267</item>
+        <item>https://picsum.photos/id/102/367/267</item>
+        <item>https://picsum.photos/id/1021/367/267</item>
+        <item>https://picsum.photos/id/1022/367/267</item>
+        <item>https://picsum.photos/id/1023/367/267</item>
+        <item>https://picsum.photos/id/1024/367/267</item>
+        <item>https://picsum.photos/id/1025/367/267</item>
+        <item>https://picsum.photos/id/1026/367/267</item>
+        <item>https://picsum.photos/id/1028/367/267</item>
+        <item>https://picsum.photos/id/1029/367/267</item>
+        <item>https://picsum.photos/id/103/367/267</item>
+        <item>https://picsum.photos/id/1031/367/267</item>
+        <item>https://picsum.photos/id/1032/367/267</item>
+        <item>https://picsum.photos/id/1033/367/267</item>
+        <item>https://picsum.photos/id/1035/367/267</item>
+        <item>https://picsum.photos/id/1036/367/267</item>
+        <item>https://picsum.photos/id/1037/367/267</item>
+        <item>https://picsum.photos/id/1038/367/267</item>
+        <item>https://picsum.photos/id/1039/367/267</item>
+        <item>https://picsum.photos/id/104/367/267</item>
+        <item>https://picsum.photos/id/1040/367/267</item>
+        <item>https://picsum.photos/id/1041/367/267</item>
+        <item>https://picsum.photos/id/1042/367/267</item>
+        <item>https://picsum.photos/id/1043/367/267</item>
+        <item>https://picsum.photos/id/1044/367/267</item>
+        <item>https://picsum.photos/id/1045/367/267</item>
+        <item>https://picsum.photos/id/1047/367/267</item>
+        <item>https://picsum.photos/id/1048/367/267</item>
+        <item>https://picsum.photos/id/1049/367/267</item>
+        <item>https://picsum.photos/id/1050/367/267</item>
     </string-array>
 </resources>

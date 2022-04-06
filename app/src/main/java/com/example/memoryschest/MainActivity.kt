@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun launchMainWidgets() {
         val themeButton : Button = findViewById(R.id.themeButton)
-        themeButton.setOnClickListener() {
+        themeButton.setOnClickListener {
             themeChangeFromMain()
         }
         setFavoriteButtonDynamically(getUserTheme())
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
         val adapterImages = GridItemAdapter(cardTitles, cardImages)
         // spanCount the number of items side by side (in a single row)
-        val gridLayout = GridLayoutManager(this, 4)
+        val gridLayout = GridLayoutManager(this, 2)
         gridItems.layoutManager = gridLayout
         gridItems.adapter = adapterImages
     }
