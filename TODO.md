@@ -6,8 +6,9 @@
 - [x] Research which image `recycleviewer` to use? Picasso or others?
 - [x] `existsUserTheme` always returns false! (fix it!)
 - [x] Change the hearts pictures on the Main Activity menu
-- [ ] Implement Logic to change View Mode of the pictures - Change Layout of `RecyclerView` dynamically!
-- [ ] Change Button text from Single to Grid after every click.
+- [x] Implement Logic to change View Mode of the pictures - Change Layout of `RecyclerView` dynamically!
+- [x] Change Button text from Single to Grid after every click.
+- [ ] Select various items from `recyclerview` to add to favorites with a press of the favorite button
 
 # Items that must be included in the project:
 - [x] Different activities and use of intents
@@ -15,6 +16,6 @@
 - [x] Different localization in at least two languages (English and Spanish)
 - [x] Two or more user settings
 - [x] `RecyclerView` use
-- [ ] Use of a Database
+- [-] Use of a Database
 - [x] Internet usage
 

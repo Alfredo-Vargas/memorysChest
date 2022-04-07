@@ -20,7 +20,8 @@
     <string name="honey_dew_ball">Bola color gotas de miel</string>
     <string name="spanish_pink_ball">Bola color rosado español</string>
     <string name="favorite_button">Boton con símbolo de corazón</string>
-    <string name="view_button">Vista</string>
+    <string name="view_button_single">Uno</string>
+    <string name="view_button_grid">Varios</string>
     <string name="sort_button">Orden</string>
     <string name="theme_button">Tema</string>
     <string-array name="theme">

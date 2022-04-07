@@ -7,8 +7,9 @@ import java.util.*
 @Entity
 data class FavoritePhotos  (
     @PrimaryKey(autoGenerate = true)
+    val photoID: Int,
     val photoName: String,
-    val dateTaken: Date,
+    val dateTaken: String,
     val location: String
 
 )

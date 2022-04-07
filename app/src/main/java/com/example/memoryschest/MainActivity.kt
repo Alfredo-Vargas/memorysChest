@@ -42,20 +42,47 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchMainWidgets() {
+        val modeViewButton : Button = findViewById(R.id.viewButton)
         val themeButton : Button = findViewById(R.id.themeButton)
         themeButton.setOnClickListener {
             themeChangeFromMain()
         }
         setFavoriteButtonDynamically(getUserTheme())
 
-        // Here we create the adapter
+
+        // Here we create the adapter to the View Mode (Recycler view with images)
         val cardTitles : Array<String> = resources.getStringArray(R.array.cardTittles)
         val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
-        val adapterImages = GridItemAdapter(cardTitles, cardImages)
-        // spanCount the number of items side by side (in a single row)
-        val gridLayout = GridLayoutManager(this, 2)
-        gridItems.layoutManager = gridLayout
-        gridItems.adapter = adapterImages
+        val adapterImagesGrid = GridItemAdapter(cardTitles, cardImages)
+        val adapterImagesSingle = SingleItemAdapter(cardTitles, cardImages)
+        val currentModeView: String = getString(R.string.view_button_grid)
+
+        if (modeViewButton.text.toString() == currentModeView) {
+            val gridLayout = GridLayoutManager(this, 2)
+            gridItems.layoutManager = gridLayout
+            gridItems.adapter = adapterImagesGrid
+        }
+        else {
+            val singleLayout = GridLayoutManager(this, 1)
+            gridItems.layoutManager = singleLayout
+            gridItems.adapter = adapterImagesSingle
+        }
+
+        // Here the View Mode can change dynamically
+        modeViewButton.setOnClickListener() {
+            if (modeViewButton.text.toString() == currentModeView) {
+                modeViewButton.setText(R.string.view_button_single)
+                val singleLayout = GridLayoutManager(this, 1)
+                gridItems.layoutManager = singleLayout
+                gridItems.adapter = adapterImagesSingle
+            }
+            else {
+                modeViewButton.setText(R.string.view_button_grid)
+                val gridLayout = GridLayoutManager(this, 2)
+                gridItems.layoutManager = gridLayout
+                gridItems.adapter = adapterImagesGrid
+            }
+        }
     }
 
     private fun applyUserThemeToMain(themeChosen: String?){

@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-// TODO: add array of booleans, each item has now a state of selected or not selected !!!
-class GridItemAdapter (val cardTitles : Array<String>, val cardImages : Array<String>): RecyclerView.Adapter<GridItemAdapter.ViewHolder>() {
+class SingleItemAdapter (val cardTitles : Array<String>, val cardImages : Array<String>): RecyclerView.Adapter<SingleItemAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val cardImage : ImageView = itemView.findViewById(R.id.cardImage)
@@ -17,7 +16,7 @@ class GridItemAdapter (val cardTitles : Array<String>, val cardImages : Array<St
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_item_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.single_item_view, parent, false)
         return ViewHolder(view)
     }
 
