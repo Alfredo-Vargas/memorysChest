@@ -4,12 +4,15 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+//    private var mainMenu: Menu? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,6 +44,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Memories Menu settings
+//    fun showDeleteMenu(show: Boolean) {
+//        mainMenu?.findItem(R.id.mDelete)?.isVisible = show
+//    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        mainMenu = menu
+//        menuInflater.inflate(R.menu.memories_menu, mainMenu)
+//        showDeleteMenu(false)
+//        return super.onCreateOptionsMenu(menu)
+//    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when(item.itemId)
+//        {
+//            R.id.mDelete -> { deleteItems()}
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+//
+//    private fun deleteItems() {
+//
+//    }
+
+
     private fun launchMainWidgets() {
         val modeViewButton : Button = findViewById(R.id.viewButton)
         val themeButton : Button = findViewById(R.id.themeButton)
@@ -53,7 +79,9 @@ class MainActivity : AppCompatActivity() {
         // Here we create the adapter to the View Mode (Recycler view with images)
         val cardTitles : Array<String> = resources.getStringArray(R.array.cardTittles)
         val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
-        val adapterImagesGrid = GridItemAdapter(cardTitles, cardImages)
+        val selectedValues : Array<String> = resources.getStringArray(R.array.cardSelected)
+        val adapterImagesGrid = GridItemAdapter(cardTitles, cardImages, selectedValues)
+
         val adapterImagesSingle = SingleItemAdapter(cardTitles, cardImages)
         val currentModeView: String = getString(R.string.view_button_grid)
 

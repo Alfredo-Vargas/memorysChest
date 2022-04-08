@@ -8,7 +8,8 @@
 - [x] Change the hearts pictures on the Main Activity menu
 - [x] Implement Logic to change View Mode of the pictures - Change Layout of `RecyclerView` dynamically!
 - [x] Change Button text from Single to Grid after every click.
-- [ ] Select various items from `recyclerview` to add to favorites with a press of the favorite button
+- [-] Select various items from `recyclerview` to add to favorites with a press of the favorite button
+- [ ] New to manage boolean of selection with click and long pressed on the figures (register id and set selection to enable to change visibility)
 
 # Items that must be included in the project:
 - [x] Different activities and use of intents
