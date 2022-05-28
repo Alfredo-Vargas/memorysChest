@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Memories Menu settings
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.memories_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 //    fun showDeleteMenu(show: Boolean) {
 //        mainMenu?.findItem(R.id.mDelete)?.isVisible = show
 //    }
@@ -77,10 +81,18 @@ class MainActivity : AppCompatActivity() {
 
 
         // Here we create the adapter to the View Mode (Recycler view with images)
+        // We fetch the images from internet (connection required!)
         val cardTitles : Array<String> = resources.getStringArray(R.array.cardTittles)
         val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
         val selectedValues : Array<String> = resources.getStringArray(R.array.cardSelected)
-        val adapterImagesGrid = GridItemAdapter(cardTitles, cardImages, selectedValues)
+        val adapterImagesGrid = GridItemAdapter(cardTitles, cardImages)
+
+        adapterImagesGrid.setOnClickListener(object: GridItemAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+                Toast.makeText(this@MainActivity, "You clicked on item no. $position", Toast.LENGTH_SHORT).show()
+                TODO("Not yet implemented")
+            }
+        })
 
         val adapterImagesSingle = SingleItemAdapter(cardTitles, cardImages)
         val currentModeView: String = getString(R.string.view_button_grid)

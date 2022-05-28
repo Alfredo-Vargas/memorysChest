@@ -9,26 +9,22 @@
     <LinearLayout
         android:id="@+id/verticalMainMenu"
         android:layout_width="match_parent"
-        android:layout_height="101dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/gridItems"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp">
 
         <LinearLayout
             android:id="@+id/horizontalMainMenu"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="-179dp"
-            tools:layout_editor_absoluteY="281dp">
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/viewButton"
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -37,7 +33,7 @@
 
             <Button
                 android:id="@+id/sortButton"
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -46,7 +42,7 @@
 
             <ImageButton
                 android:id="@+id/favoriteButton"
-                android:layout_width="70dp"
+                android:layout_width="89dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -56,7 +52,7 @@
 
             <Button
                 android:id="@+id/themeButton"
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -65,15 +61,11 @@
 
         </LinearLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gridItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/mainTheme" />
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/gridItems"
-        android:layout_width="722dp"
-        android:layout_height="307dp"
-        android:theme="@style/mainTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
