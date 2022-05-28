@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/verticalMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/gridItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/horizontalMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="-179dp"
+            tools:layout_editor_absoluteY="281dp">
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/view_button_grid"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/sortButton"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/sort_button"
+                android:textSize="12dp" />
+
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/favorite_button"
+                app:srcCompat="@drawable/ic_heart_main"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/themeButton"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/theme_button"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridItems"
+        android:layout_width="722dp"
+        android:layout_height="307dp"
+        android:theme="@style/mainTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

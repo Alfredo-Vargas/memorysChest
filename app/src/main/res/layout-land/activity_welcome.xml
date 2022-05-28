@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".WelcomeActivity">
 
     <ImageView
         android:id="@+id/imagePowderBlue"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="60dp"
         android:contentDescription="@string/powder_blue_ball"
         app:content="@string/powder_blue_ball"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageEerieBlack"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_powder_blue" />
 
     <ImageView
@@ -51,12 +50,11 @@
         android:id="@+id/imageChampagne"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="40dp"
         android:contentDescription="@string/champagne_ball"
-        app:layout_constraintBottom_toTopOf="@+id/imageEerieBlack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageEerieBlack"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_champagne" />
 
     <ImageView
@@ -76,12 +74,12 @@
         android:id="@+id/imageEerieBlack"
         android:layout_width="184dp"
         android:layout_height="139dp"
-        android:layout_marginBottom="40dp"
         android:contentDescription="@string/eerie_black_ball"
-        app:layout_constraintBottom_toTopOf="@+id/imagePowderBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTheme"
+        app:layout_constraintVertical_bias="0.26"
         app:srcCompat="@drawable/ic_eerie_black" />
 
     <ImageView
@@ -173,10 +171,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageChampagne"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintVertical_bias="0.563" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/groupDark"
