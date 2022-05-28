@@ -13,7 +13,7 @@
 
 # Items that must be included in the project:
 - [x] Different activities and use of intents
-- [ ] Different layouts for portrait and landscape mode
+- [x] Different layouts for portrait and landscape mode
 - [x] Different localization in at least two languages (English and Spanish)
 - [x] Two or more user settings
 - [x] `RecyclerView` use
