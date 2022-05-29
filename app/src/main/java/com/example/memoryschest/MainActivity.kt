@@ -8,14 +8,19 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.memoryschest.data.Photo
+import com.example.memoryschest.data.PhotoViewModel
 import com.example.memoryschest.models.CardItemValues
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var mainMenu: Menu? = null
+    private lateinit var mPhotoViewModel: PhotoViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mPhotoViewModel = ViewModelProvider(this)[PhotoViewModel::class.java]
 
         // Run this one time to clear SharedPreferences or remove to save to system.
 /*
@@ -199,6 +204,21 @@ class MainActivity : AppCompatActivity() {
                 debugToastMain(getString(R.string.post_message_favorites))
             }
         }
+/*
+        var counter: Int = 0
+        for (cardItem in listCardItemValues) {
+            if (counter % 2 == 0) {
+                val photo = Photo(0, "Belgium", "Samsung")
+                mPhotoViewModel.addPhoto(photo)
+            }
+            else {
+                val photo = Photo(0, "Italy", "Iphone")
+                mPhotoViewModel.addPhoto(photo)
+            }
+            counter++
+        }
+        debugToastMain("Photo's info were added to database succesfully")
+*/
     }
 
     private fun applyUserThemeToMain(themeChosen: String?){
