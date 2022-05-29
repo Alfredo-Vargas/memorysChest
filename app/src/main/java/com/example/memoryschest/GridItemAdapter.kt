@@ -47,52 +47,27 @@ class GridItemAdapter (private var listItemValues: MutableList<CardItemValues>,
                 deselectItem(holder, item, position)
             }
         }
-//
-//        holder.cardImage.setOnLongClickListener {
-//            selectItem(holder, item, position)
-//            true
-//        }
-//
-
-//        holder.cardImage.setOnClickListener {
-//            //  if already selected then means remove selection
-//            if (itemSelectedList.contains(position)) {
-//                itemSelectedList.removeAt(position)
-//                holder.selectMark.visibility = View.GONE
-//                item.selected = false
-//                if (itemSelectedList.isEmpty()) {
-//                    // if nothing is selected no remove operations are allowed
-//                    showMenuDelete(false)
-//                    isEnabled = false
-//                }
-//            }
-//            else if (isEnabled) {
-//                selectItem(holder, item, position)
-//            }
-//        }
     }
 
     // function that selects the image visually
     private fun selectItem(holder: GridItemAdapter.ViewHolder, item: CardItemValues, position: Int) {
         isEnabled = true  // at least one selected item shows the delete button
-//        itemSelectedList.add(position)  // we update the dynamic list that keeps track of selected items
+        itemSelectedList.add(position)  // we update the dynamic list that keeps track of selected items
         item.selected = true
         holder.selectMark.visibility = View.VISIBLE
         showMenuDelete(true)
+//        println(item)
     }
     // function that deselects the image visually
     private fun deselectItem(holder: GridItemAdapter.ViewHolder, item: CardItemValues, position: Int) {
-//        itemSelectedList.removeAt(position)
+        var itemIndex = itemSelectedList.indexOf(position)
+        itemSelectedList.removeAt(itemIndex)
         item.selected = false
         holder.selectMark.visibility = View.GONE
-/*
+    }
 
-        if (itemselectedlist.isempty()) {
-            showmenudelete(false)
-            isenabled = false
-        }
-
-*/
+    fun getItemsSelected(): MutableList<Int> {
+        return itemSelectedList
     }
 
     override fun getItemCount(): Int {
