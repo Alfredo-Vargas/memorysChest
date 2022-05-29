@@ -15,11 +15,10 @@ import com.squareup.picasso.Picasso
 class GridItemAdapter (private var listItemValues: MutableList<CardItemValues>,
                        val cardTitles : Array<String>,
                        val cardImages : Array<String>,
-                       var cardValues : MutableList<CardItemValues>,
                        private val showMenuDelete: (Boolean) -> Unit
                        ): RecyclerView.Adapter<GridItemAdapter.ViewHolder>() {
     private var isEnabled = false
-    private val itemSelectedList = mutableListOf<Int>()
+    private val itemSelectedList = mutableListOf<Int>()  // dynamic list to track selected items
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val cardImage : ImageView = itemView.findViewById(R.id.cardImage)
@@ -37,36 +36,63 @@ class GridItemAdapter (private var listItemValues: MutableList<CardItemValues>,
         val item = listItemValues[position]
         holder.cardTitle.text = cardTitles[position]
         Picasso.get().load(cardImages[position]).into(holder.cardImage)
+        // initially all select marks are not visible
         holder.selectMark.visibility = View.GONE
 
-        holder.cardTitle.setOnLongClickListener {
-            selectItem(holder, item, position)
-            true
-        }
-
-        holder.cardTitle.setOnClickListener {
-            if (itemSelectedList.contains(position)) {
-                itemSelectedList.removeAt(position)
-//                holder.selectMark.visibility = View.GONE
-                item.selected = false
-                if (itemSelectedList.isEmpty()) {
-                    showMenuDelete(false)
-                    isEnabled = false
-                }
-            }
-            else if (isEnabled) {
+        holder.cardImage.setOnClickListener {
+            if (item.selected == false) {
                 selectItem(holder, item, position)
             }
+            else {
+                deselectItem(holder, item, position)
+            }
         }
+//
+//        holder.cardImage.setOnLongClickListener {
+//            selectItem(holder, item, position)
+//            true
+//        }
+//
 
-        }
+//        holder.cardImage.setOnClickListener {
+//            //  if already selected then means remove selection
+//            if (itemSelectedList.contains(position)) {
+//                itemSelectedList.removeAt(position)
+//                holder.selectMark.visibility = View.GONE
+//                item.selected = false
+//                if (itemSelectedList.isEmpty()) {
+//                    // if nothing is selected no remove operations are allowed
+//                    showMenuDelete(false)
+//                    isEnabled = false
+//                }
+//            }
+//            else if (isEnabled) {
+//                selectItem(holder, item, position)
+//            }
+//        }
+    }
 
+    // function that selects the image visually
     private fun selectItem(holder: GridItemAdapter.ViewHolder, item: CardItemValues, position: Int) {
-        isEnabled = true
-        itemSelectedList.add(position)
+        isEnabled = true  // at least one selected item shows the delete button
+//        itemSelectedList.add(position)  // we update the dynamic list that keeps track of selected items
         item.selected = true
-//        holder.
+        holder.selectMark.visibility = View.VISIBLE
         showMenuDelete(true)
+    }
+    // function that deselects the image visually
+    private fun deselectItem(holder: GridItemAdapter.ViewHolder, item: CardItemValues, position: Int) {
+//        itemSelectedList.removeAt(position)
+        item.selected = false
+        holder.selectMark.visibility = View.GONE
+/*
+
+        if (itemselectedlist.isempty()) {
+            showmenudelete(false)
+            isenabled = false
+        }
+
+*/
     }
 
     override fun getItemCount(): Int {

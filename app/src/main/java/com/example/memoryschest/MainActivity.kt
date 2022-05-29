@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity() {
         )
         val cardTitles : Array<String> = resources.getStringArray(R.array.cardTittles)
         val cardImages : Array<String> = resources.getStringArray(R.array.cardImages)
-        val adapterImagesGrid = GridItemAdapter(listCardItemValues, cardTitles, cardImages, listCardItemValues){show -> showDeleteMenu(show)}
+        val adapterImagesGrid = GridItemAdapter(listCardItemValues, cardTitles, cardImages){show -> showDeleteMenu(show)}
 
         val adapterImagesSingle = SingleItemAdapter(cardTitles, cardImages)
         val currentModeView: String = getString(R.string.view_button_grid)
