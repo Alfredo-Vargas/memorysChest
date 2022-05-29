@@ -204,7 +204,7 @@ class MainActivity : AppCompatActivity() {
                 debugToastMain(getString(R.string.post_message_favorites))
             }
         }
-/*
+        // We populate the database here
         var counter: Int = 0
         for (cardItem in listCardItemValues) {
             if (counter % 2 == 0) {
@@ -218,7 +218,6 @@ class MainActivity : AppCompatActivity() {
             counter++
         }
         debugToastMain("Photo's info were added to database succesfully")
-*/
     }
 
     private fun applyUserThemeToMain(themeChosen: String?){
