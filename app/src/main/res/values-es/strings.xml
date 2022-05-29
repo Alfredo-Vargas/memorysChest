@@ -24,6 +24,10 @@
     <string name="view_button_grid">Varios</string>
     <string name="sort_button">Orden</string>
     <string name="theme_button">Tema</string>
+    <string name="pre_message_favorites">Las imagenes adicionadas a favoritos son:</string>
+    <string name="post_message_favorites">No hay imagenes seleccionadas para adicionar a favoritos</string>
+    <string name="pre_message_deletion">Imagenes a ser eliminadas son:</string>
+    <string name="post_message_deletion">No hay imagenes seleccionadas para ser eliminadas</string>
     <string-array name="theme">
         <item>Tema</item>
         <item>castaño</item>

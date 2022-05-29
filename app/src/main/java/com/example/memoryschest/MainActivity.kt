@@ -65,8 +65,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun delete() {
-//        debugToastMain("Delete operation starts here")
-        var itemsToDelete: String = "Items to be deleted are:\n"
+        var itemsToDelete: String = getString(R.string.pre_message_deletion) + "\n"
         var isDeletionAllowd: Boolean = false
         for (si in listCardItemValues) {
             if (si.selected) {
@@ -78,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             debugToastMain(itemsToDelete)
         }
         else {
-            debugToastMain("There are no items selected for deletion")
+            debugToastMain(getString(R.string.post_message_deletion))
         }
     }
 
@@ -138,6 +137,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun launchMainWidgets() {
         val modeViewButton : Button = findViewById(R.id.viewButton)
+        val favoriteViewButton: ImageButton = findViewById(R.id.favoriteButton)
         val themeButton : Button = findViewById(R.id.themeButton)
         themeButton.setOnClickListener {
             themeChangeFromMain()
@@ -179,6 +179,24 @@ class MainActivity : AppCompatActivity() {
                 val gridLayout = GridLayoutManager(this, 2)
                 gridItems.layoutManager = gridLayout
                 gridItems.adapter = adapterImagesGrid
+            }
+        }
+
+        // Here we implement logic of add pictures to favorites
+        favoriteViewButton.setOnClickListener() {
+            var itemsToAddToFavorites: String = getString(R.string.pre_message_favorites) + "\n"
+            var isAdditionAllowed: Boolean = false
+            for (si in listCardItemValues) {
+                if (si.selected) {
+                    isAdditionAllowed = true
+                    itemsToAddToFavorites += " " + si.number + ", "
+                }
+            }
+            if (isAdditionAllowed) {
+                debugToastMain(itemsToAddToFavorites)
+            }
+            else {
+                debugToastMain(getString(R.string.post_message_favorites))
             }
         }
     }
@@ -230,7 +248,7 @@ class MainActivity : AppCompatActivity() {
 
     fun debugToastMain(message: String) {
         Toast(this).apply {
-            duration = Toast.LENGTH_SHORT
+            duration = Toast.LENGTH_LONG
             setGravity(Gravity.CENTER, 0, 0)
             setText(message)
         }.show()

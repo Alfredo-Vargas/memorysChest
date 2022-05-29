@@ -23,6 +23,10 @@
     <string name="view_button_grid">Grid</string>
     <string name="sort_button">sort</string>
     <string name="theme_button">theme</string>
+    <string name="pre_message_favorites">The images added to favorites are:</string>
+    <string name="post_message_favorites">There are no items selected to add to favorites</string>
+    <string name="pre_message_deletion">Items to be deleted are:</string>
+    <string name="post_message_deletion">There are no items selected for deletion</string>
     <string-array name="theme">
         <item>theme</item>
         <item>chestnut</item>
